@@ -31,7 +31,7 @@ EOF
     address_prefixes  = list(string)
     nsg_id            = optional(string)
     service_endpoints = optional(list(string))
-    delegations       = optional(list(object({
+    delegations = optional(list(object({
       name    = string
       service = string
     })))

@@ -17,9 +17,9 @@ resource "azurerm_kubernetes_cluster" "this" {
   }
 
   network_profile {
-  network_plugin      = "azure"
-  network_policy      = "azure"
-  network_plugin_mode = "overlay"
+    network_plugin      = "azure"
+    network_policy      = "azure"
+    network_plugin_mode = "overlay"
 
     load_balancer_profile {
       managed_outbound_ip_count = 2
@@ -34,7 +34,7 @@ resource "azurerm_kubernetes_cluster" "this" {
     vnet_subnet_id              = var.subnet_id
     os_disk_size_gb             = var.os_disk_size_gb
 
-    node_count           = var.node_count
+    node_count = var.node_count
 
     upgrade_settings {
       drain_timeout_in_minutes      = 5
